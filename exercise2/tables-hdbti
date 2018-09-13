@@ -1,0 +1,9 @@
+import = [
+    {
+        table = "exercise.data::tables.Twitter";
+        file = "exercise.data.loads:tweets.csv";
+        header = true;
+        delimField = ";";
+        schema = "DEMO";   
+    }
+];

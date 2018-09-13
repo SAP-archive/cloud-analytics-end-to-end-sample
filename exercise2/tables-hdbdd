@@ -1,0 +1,19 @@
+namespace exercise.data;
+
+@Schema: 'DEMO'
+
+context tables {
+    @Catalog.tableType : #COLUMN 
+    entity Twitter {
+        key id : String(10) not null;
+			user : String(8) not null;
+			replyId : String(10);
+			retweetedId : String(10);
+			userId : String(4) not null;
+			source : String(100);
+			text : String(280);
+			verified : hana.TINYINT default 0;
+			created : String(22) not null;
+			lang : String(3);
+	};   
+};
