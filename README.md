@@ -1,7 +1,7 @@
 # cloud-analytics-end-to-end-sample
 TechEd session: AIN623 - Deep Dive into SAP Analytics Cloud and SAP Cloud Platform.
 
-##Description
+## Description
 The TechEd 2018 session AIN623 describes how to create a end-to-end analytics scenario using the trial accounts of SAP Cloud Platform and SAP Analytics Cloud.
 
 The exercise documentation of this sample is completely self-contained and can therefore also be used after TechEd.
