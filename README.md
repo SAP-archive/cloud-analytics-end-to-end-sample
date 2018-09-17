@@ -1,18 +1,17 @@
 # cloud-analytics-end-to-end-sample
-End-to-end analytics scenario using the trial landscapes of SAP CP and SAC.
+TechEd session: AIN623 - Deep Dive into SAP Analytics Cloud and SAP Cloud Platform.
 
-This sample is an exercise documentation to setup your own end-to-end scenario with SAP Cloud Platform and SAP Analytics Cloud.
+##Description
+The TechEd 2018 session AIN623 describes how to create a end-to-end analytics scenario using the trial accounts of SAP Cloud Platform and SAP Analytics Cloud.
 
-This Documentation is also used in the TechEd Session AIN623 - Deep Dive into SAP Analytics Cloud and SAP Cloud Platform.
+The exercise documentation of this sample is completely self-contained and can therefore also be used after TechEd.
 
-**ATTENTION** If you are following the exercise outside the TechEd session AIN623, you will need a company e-mail address to create a SAC trial account, or use an existing enterprise account of SAP Analytics Cloud.
-
-## Scenario Overview
+### Scenario Overview
 In these exercises you will learn how to create your first end-to-end analytics scenario using SAP Cloud Platform and SAP Analytics Cloud.
 Inside SAP Cloud Platform we will use SAP HANA as a database to store data and to create so called calculation views, to analyze the data.
 With a live data connection, the calculation views are then consumed in SAP Analytics Cloud. The consumption happens in so call models. On top of these models a dashboard can then be build.
 
-## Scenario Diagram
+### Scenario Diagram
 
 <img src="img/diagram1.JPG" alt="diagram1" width="60%">
 
@@ -32,6 +31,21 @@ The simplified scenario diagram showing only the exercise content could look lik
 
 <img src="img/diagram2.JPG" alt="diagram2" width="60%">
 
+## NOTICE
+This sample is a TechEd sample. The exercise descriptions of this sample are used during the TechEd session AIN623.
+
+## Requirements
+
+### For TechEd 2018
+For attendees of SAP TechEd 2018, the session instructor will hand out log in information for SAP Cloud Platform trial accounts. Therefore you can skip Exercise 0 and start directly with [Exercise 1](./exercise1/README.md).
+You can also use your own trial account. In this case please refer to [Exercise 0](./exercise0/README.md).
+In Exercise 4 you are creating an SAP Analytics Cloud trial account. Therefore you need a company e-mail address, or you can contact your session instructor.
+
+### For General Use
+If you are following the exercises outside the TechEd session AIN623, you will need an SAP Cloud Platform trial or enterprise account (including SAP HANA) and an SAP Analytics Cloud trial or enterprise account.
+[Exercise 0](./exercise0/README.md) describes how to create an SAP Cloud Platform account and how to create a HANA database there.
+During Exercise 4 you are creating an SAP Analytics Cloud trial account. For this exercise a *company e-mail address* is required!
+
 ## Exercises
 - [Exercise 0](./exercise0/README.md): This exercise is a prerequisite. You only need to follow these steps, if you don't have an SAP Cloud Platform trial account already.
 - [Exercise 1](./exercise1/README.md): Manage roles and users. In this exercise you will learn, how to create new users in your SAP HANA database in SAP Cloud Platform and how to administer them.
@@ -40,6 +54,27 @@ The simplified scenario diagram showing only the exercise content could look lik
 - [Exercise 4](./exercise4/README.md): Live Data Connection. In this exercise you are creating a live data connection from SAP Analytics Cloud to your SAP HANA database in SAP Cloud Platform.
 - [Exercise 5](./exercise5/README.md): Modeling in SAP Analytics Cloud. How to create a model on top of your live data connection to SAP HANA will be explained in this exercise.
 - [Exercise 6](./exercise6/README.md): Creating a story in SAP Analytics Cloud. In this exercise you will create your first story in SAP Analytics Cloud to get insights into your data.
+
+
+## Download and Installation
+The exercises for this session are entirely Cloud-based. You only need an internet browser on your machine.
+**Attention**: SAP Analytics Cloud works best with Google Chrome. If you use other internet browsers, some features might not be supported!
+
+## Configuration
+None
+
+## Limitations
+When using SAP Analytics Cloud in other internet browsers than *Google Chrome*, not all features are supported. (For example creating a new live data connection is not possible)
+
+## Known Issues
+None so far...
+
+## Support and ContributingHow
+This project is provided "as-is": there is no guarantee that raised issues will be answered or addressed in future releases.
+
+For more information and support on SAP Cloud Platform, please visit https://help.sap.com/viewer/p/CP
+
+For more information and support on SAP Analytics Cloud, please visit https://help.sap.com/doc/00f68c2e08b941f081002fd3691d86a7/release/en-US/index.html
 
 ## License
 This project is licensed under the Apache Software License, v. 2 except as noted otherwise in the [LICENSE](./LICENSE) file.
