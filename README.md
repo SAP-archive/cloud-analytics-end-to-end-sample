@@ -74,7 +74,7 @@ When using SAP Analytics Cloud in other internet browsers than *Google Chrome*, 
 ## Known Issues
 None so far...
 
-## Support and ContributingHow
+## Support and Contributing
 This project is provided "as-is": there is no guarantee that raised issues will be answered or addressed in future releases.
 
 For more information and support on SAP Cloud Platform, please visit https://help.sap.com/viewer/p/CP
