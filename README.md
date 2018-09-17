@@ -38,12 +38,16 @@ This sample is a TechEd sample. The exercise descriptions of this sample are use
 
 ### For TechEd 2018
 For attendees of SAP TechEd 2018, the session instructor will hand out log in information for SAP Cloud Platform trial accounts. Therefore you can skip Exercise 0 and start directly with [Exercise 1](./exercise1/README.md).
+
 You can also use your own trial account. In this case please refer to [Exercise 0](./exercise0/README.md).
+
 In Exercise 4 you are creating an SAP Analytics Cloud trial account. Therefore you need a company e-mail address, or you can contact your session instructor.
 
 ### For General Use
 If you are following the exercises outside the TechEd session AIN623, you will need an SAP Cloud Platform trial or enterprise account (including SAP HANA) and an SAP Analytics Cloud trial or enterprise account.
+
 [Exercise 0](./exercise0/README.md) describes how to create an SAP Cloud Platform account and how to create a HANA database there.
+
 During Exercise 4 you are creating an SAP Analytics Cloud trial account. For this exercise a *company e-mail address* is required!
 
 ## Exercises
@@ -58,6 +62,7 @@ During Exercise 4 you are creating an SAP Analytics Cloud trial account. For thi
 
 ## Download and Installation
 The exercises for this session are entirely Cloud-based. You only need an internet browser on your machine.
+
 **Attention**: SAP Analytics Cloud works best with Google Chrome. If you use other internet browsers, some features might not be supported!
 
 ## Configuration
