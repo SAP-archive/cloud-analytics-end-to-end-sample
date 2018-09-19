@@ -82,4 +82,4 @@ For more information and support on SAP Cloud Platform, please visit https://hel
 For more information and support on SAP Analytics Cloud, please visit https://help.sap.com/doc/00f68c2e08b941f081002fd3691d86a7/release/en-US/index.html
 
 ## License
-This project is licensed under the Apache Software License, v. 2 except as noted otherwise in the [LICENSE](./LICENSE) file.
+This project is licensed under the SAP SAMPLE CODE LICENSE AGREEMENT except as noted otherwise in the [LICENSE](./LICENSE) file.
