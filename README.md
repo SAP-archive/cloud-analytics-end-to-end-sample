@@ -13,7 +13,7 @@ With a live data connection, the calculation views are then consumed in SAP Anal
 
 ### Scenario Diagram
 
-<img src="img/diagram1.JPG" alt="diagram1" width="60%">
+<img src="img/diagram1.JPG" alt="diagram1" width="80%">
 
 This scenario diagram shows the full end-to-end scenario. In this case Twitter is used as a data source and data is written into a SAP HANA database in SAP Cloud Platform. Therefore, you can either use for example Cloud Platform Integration or you can write your own little application and run it on SAP Cloud Platform.
 Once the data is inside the SAP HANA database, the different analytical engines are used to get more insights into the data.
@@ -29,7 +29,7 @@ In the exercises described here, some of the options above are simplified, to sa
 
 The simplified scenario diagram showing only the exercise content could look like this:
 
-<img src="img/diagram2.JPG" alt="diagram2" width="60%">
+<img src="img/diagram2.JPG" alt="diagram2" width="80%">
 
 ## NOTICE
 This sample is a TechEd sample. The exercise descriptions of this sample are used during the TechEd session AIN623.
