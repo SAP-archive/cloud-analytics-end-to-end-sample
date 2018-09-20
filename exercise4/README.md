@@ -1,12 +1,16 @@
 ### AIN623
 
-# Setting Up A Live Data Connection to SAP Analytics Cloud
+# Exercise 4: Setting Up A Live Data Connection to SAP Analytics Cloud
 
 You can create live data connections to on-premise and cloud systems. Data is “live”, meaning that when a user opens a story in SAP Analytics Cloud, changes made to the data in the source system are reflected immediately.
 
 In SAP Analytics Cloud, you can create models from data sources in on-premise or cloud systems, build stories based on those models, and perform online analysis without data replication. This feature allows SAP Analytics Cloud to be used in scenarios where data cannot be moved into the cloud for security or privacy reasons, or your data already exists on a different cloud system.
 
 In this exercise you are going to create a live data connection to an SAP Cloud Platform (SAPCP) system and give an SAP HANA user permission to use the connection in SAP Analytics Cloud.
+
+#### Notice
+
+SAP Analytics Cloud is optimized for Google Chrome browsers. If you use a different internet browser, you are not able to see and use all the different features.
 
 ## Step 1: Creating an Trial Account for SAP Analytics Cloud
 
@@ -61,14 +65,14 @@ In the upcoming Pop-Up you can enter all the necessary information to create the
 *Note: if you are using the SAP Analytics Cloud trial account, you can only connect to the trial accounts of SAP Cloud Platform. Not to a dedicated enterprise account.*
 
 Enter the following information in the screen:
-- Name: *cptrial*
-- Description: *Connection to CP Trial Account*
-- Connection Type: *SAP Cloud Platform*
-- SAP Cloud Platform Account: *CP account name* (the technical name of your subaccount, you copied in an earlier step)
-- Database name: *exercise* (the name of your SAP HANA database in SAP Cloud Platform)
-- Landscape Host: Europe (Rot) – **Trial**
-- User Name: *DEMO* (this is the user of your SAP HANA database)
-- Password: *Welcome18*
+- Name: `cptrial`
+- Description: `Connection to CP Trial Account`
+- Connection Type: `SAP Cloud Platform`
+- SAP Cloud Platform Account: `<enter the technical name of your subaccount here>`
+- Database name: `exercise` (the name of your SAP HANA database in SAP Cloud Platform)
+- Landscape Host: `Europe (Rot) – `**Trial**
+- User Name: `DEMO` (this is the user of your SAP HANA database)
+- Password: `Welcome18`
 - Tick the box to save the credentials
 
 Press *Ok*
@@ -84,6 +88,8 @@ Congratulations! You created your first live data connection in SAP Analytics Cl
 Continue with [Exercise5](../exercise5/README.md)
 
 ## Troubleshooting
+
+If you don't see the "Connection" tab in the main menu, please make sure to use **Google Chrome** as internet browser. SAP Analytics Cloud is optimized for Google Chrome and some features are not available in other browsers.
 
 If the creation of your connection fails, please check:
 - Did you select *Europe (Rot)* instead of *Europe (Rot) – Trial*?

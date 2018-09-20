@@ -1,6 +1,8 @@
 ### AIN623
 
-# Importing Data
+# Exercise 2: Importing Data
+
+For this sample scenario a dataset with 1000 entries is provided as a csv file. As the data should be imported into a HANA table, different files are needed in the HANA database. How to create the according files and the content of these files is described in this exercise.
 
 ## Step 1: Creating the necessary Files
 
@@ -12,11 +14,11 @@ With a right click on *Content* create a new package via *New > Package*
 
 <img src="img/newpckg.png" alt="newPackage" width="40%">
 
-Enter *exercise* as the package name and click *Create*
+Enter `exercise` as the package name and click *Create*
 
 <img src="img/exercisePckg.png" alt="newExercisePackage" width="40%">
 
-Repeat this step to create a sub-package *data* in your newly created *exercise* package. For the *data* package again create a sub-package named *loads*.
+Repeat this step to create a sub-package `data` in your newly created *exercise* package. For the *data* package again create a sub-package named `loads`.
 
 Afterwards your structure should look like this:
 
@@ -28,7 +30,7 @@ As a first step create a new *.hdbdd* file in your *data* folder. Therefore, rig
 
 <img src="img/newhdbdd.png" alt="newhdbdd" width="40%">
 
-As a file name enter *tables.hdbdd* and click create
+As a file name enter `tables.hdbdd` and click *Create*
 
 <img src="img/createhdbdd.png" alt="createhdbdd" width="40%">
 
@@ -42,7 +44,7 @@ Make sure the namespace and schema in the file are correct. Afterwards click *Sa
 
 <img src="img/hdbddContent.png" alt="ContentOfHdbddFile" width="80%">
 
-As a second step create a new file named *tweets.csv* in your *loads* folder, by clicking right and navigating through *New > File*
+As a second step create a new file named `tweets.csv` in your *loads* folder, by clicking right and navigating through *New > File*
 
 <img src="img/createcsv.png" alt="createcsv" width="40%">
 
@@ -58,7 +60,7 @@ Click *Save*
 
 The last file, which is missing is the *.hdbti* file. Therefore, create a new file in your *data* folder by clicking right on *data* and click *New > File*.
 
-As a filename enter *tables.hdbti* and click *Create*
+As a filename enter `tables.hdbti` and click *Create*
 
 <img src="img/createhdbti.png" alt="createhdbti" width="40%">
 
@@ -97,3 +99,5 @@ Continue with [Exercise3](../exercise3/README.md)
 ## Troubleshooting
 
 If there is no content in your table, please check the content of your files, you created in exercise2. Make sure, all the paths and schema names are correct. If they are correct, open your *tweets.csv* file add a space (“ “) and delete it again. Afterwards save the file once more and do the same in the *tables.hdbti* file. After saving and activating these two files again, the content of your table should appear.
+
+Please also make sure, you named all the packages and files exactly as stated in this exercise. Common typos are for example "load" instead of "loads" or capital letters at the beginning.

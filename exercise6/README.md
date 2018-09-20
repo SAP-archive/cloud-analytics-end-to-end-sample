@@ -1,6 +1,10 @@
 ### AIN623
 
-# Creating a Dashboard in SAP Analytics Cloud
+# Exercise 6: Creating a Dashboard in SAP Analytics Cloud
+
+A story is a presentation-style document that uses charts, visualizations, text, images, and pictograms to describe data. Once you create or open a story, you can add and edit pages, sections, and elements as you like. The story toolbar is divided into different categories such as File, Insert, Data, and Tools to help you find options and perform tasks more efficiently.
+
+For more information on stories in SAP Analytics Cloud, please have a look at the help documentation: https://help.sap.com/doc/00f68c2e08b941f081002fd3691d86a7/release/en-US/29e0feaf17584e118ef30e6102008224.html
 
 ## Step 1: Creating a new dashboard in SAP Analytics Cloud
 
@@ -90,7 +94,7 @@ Choose *Save* to save your story in SAP Analytics Cloud.
 
 <img src="img/save.png" alt="save" width="40%">
 
-You can add a title to your story, for example *MyFirstStory*
+You can add a title to your story, for example `MyFirstStory`
 
 Per default your story is saved in your own folder. You can also decide to save it in the *Public* folder to make it accessible for other users on your tenant (only relevant for enterprise accounts). Or you can create your own folder structure.
 

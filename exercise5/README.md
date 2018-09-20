@@ -1,6 +1,12 @@
 ### AIN623
 
-# Modeling in SAP Analytics Cloud
+# Exercise 5: Modeling in SAP Analytics Cloud
+
+A model is a representation of the business data of an organization or business segment. The Modeler of SAP Analytics Cloud can be used to create, maintain, and load data into models.
+
+When using a live data connection, the main part of the modeling is already done in the data source. So in SAP Analytics Cloud very little steps are needed.
+
+For more information on models in SAP Analytics Cloud, please have a look at the help documentation: https://help.sap.com/doc/00f68c2e08b941f081002fd3691d86a7/release/en-US/c10af00a90cd43b6894f6767a47dff17.html
 
 ## Step 1: Creating a Model on a SAP HANA Live Data Connection
 
@@ -15,10 +21,10 @@ To start your model choose *Use a datasource > Live Data connection*
 <img src="img/liveData.png" alt="liveData" width="60%">
 
 A pop-up shows up where you need to enter the following information:
-- System Type: *SAP HANA* (use the dropdown menu)
-- Connection: *cptrial* (use the dropdown menu)
-- Data Source: *SIMPLEVIEW* (you can also select it with the help button on the right site)
-- Name: *simpleModel*
+- System Type: `SAP HANA` (use the dropdown menu)
+- Connection: `cptrial` (use the dropdown menu)
+- Data Source: `SIMPLEVIEW` (you can also select it with the help button on the right site)
+- Name: `simpleModel`
 
 <img src="img/createModel.png" alt="creteModel" width="60%">
 

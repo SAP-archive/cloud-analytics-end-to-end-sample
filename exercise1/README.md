@@ -1,6 +1,8 @@
 ### AIN623
 
-# Manage Roles and Users
+# Exercise 1: Manage Roles and Users
+
+During the creation of a SAP HANA database in a SAP Cloud Platform trial account a *SYSTEM* user is created automatically. As this user is mainly designed for administrative tasks and is therefore limited in some rights, a second user is needed. How to create this user and how to assign the according roles is described in this exercise.
 
 ## Step 1: Log in to your SAP Cloud Platform Trial Account
 
@@ -31,8 +33,8 @@ Once your database is started again, navigate to the *SAP HANA Cockpit*.
 <img src="img/cockpitLink.png" alt="cockpitLink" width="60%">
 
 Log on with the following credentials:
-- Username: *SYSTEM*
-- Password: *Abcdef123456789*
+- Username: `SYSTEM`
+- Password: `Abcdef123456789`
 
 <img src="img/systemLogon.png" alt="systemLogon" width="40%">
 
@@ -58,24 +60,24 @@ Please do a right click on *Users* and select *New User*
 
 A new mask shows up, where you can enter the necessary information to create a new user.
 
-As a User Name please enter *DEMO* and use *Initial1* as a password. Please also use Initial1 to confirm the password. (you have to change this password, when you first logon with this user to the database)
+As a User Name please enter `DEMO` and use `Initial1` as a password. Please also use Initial1 to confirm the password. (you have to change this password, when you first logon with this user to the database)
 
 <img src="img/UserName.png" alt="UserName" width="100%">
 
 To add additional roles, please click the green + icon.
 
 Please search for the following roles and add them to your user with the pop-up screen:
-- MODELING
-- sap.hana.xs.ide.roles::Developer
-- sap.bc.ina.service.v2.userRole::INA_USER
+- `MODELING`
+- `sap.hana.xs.ide.roles::Developer`
+- `sap.bc.ina.service.v2.userRole::INA_USER`
 
 <img src="img/addRoles.png" alt="addUserRoles" width="100%">
 
-In the *Object Privileges* tab add the Object *REPOSITORY_REST(SYS)* with the green + button. In the *Details* section click the box next to *EXECUTE*
+In the *Object Privileges* tab add the Object `REPOSITORY_REST(SYS)` with the green + button. In the *Details* section click the box next to *EXECUTE*
 
 <img src="img/ObjectPrivileges.png" alt="ObjectPrivileges" width="100%">
 
-In the *Package Privileges* tab add the root package *.REPO_PACKAGE_ROOT* with the green + button and in the *Details* section tick the boxes next to
+In the *Package Privileges* tab add the root package `.REPO_PACKAGE_ROOT` with the green + button and in the *Details* section tick the boxes next to
 - REPO.READ
 - REPO.EDIT_NATIVE_OBJECTS
 - REPO.ACTIVATE_NATIVE_OBJECTS
@@ -95,15 +97,15 @@ After saving your new user successfully, please click on the *Logout* button on 
 
 ## Step 4: Granting additional rights
 
-Now login with your newly created user *DEMO* and the password *Initial1*
+Now login with your newly created user `DEMO` and the password `Initial1`
 
 <img src="img/DemoLogon.png" alt="DemoLogon" width="40%">
 
-After clicking *Log On* you are prompted to change your password. Please enter the old password *Initial1* and a new password (for example *Welcome18*).
+After clicking *Log On* you are prompted to change your password. Please enter the old password `Initial1` and a new password (for example `Welcome18`).
 
 <img src="img/changepwd.png" alt="changePassword" width="40%">
 
-You are back in the User and Role management of your SAP HANA database. Please select the user *_SYS_REPO* and grant in the *Object Privileges* tab the according rights to the Schema of your newly created user, by clicking the green + button and searching for your username *DEMO*.
+You are back in the User and Role management of your SAP HANA database. Please select the user *_SYS_REPO* and grant in the *Object Privileges* tab the according rights to the Schema of your newly created user, by clicking the green + button and searching for your username `DEMO`.
 
 Also tick the box next do *SELECT* in the details section and activate the radio button to make the right grantable to others.
 

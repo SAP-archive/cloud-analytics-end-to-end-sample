@@ -1,6 +1,12 @@
 ### AIN623
 
-# SAP HANA Modeling
+# Exercise 3: SAP HANA Modeling
+
+Once the data is imported correctly into the SAP HANA database, it has to be transformed, before it can be handed over to SAP Analytics Cloud. SAP Analytics Cloud expects a calculation view.
+
+Inside a calculation view different data modeling options are possible. For more information on calculation views in SAP HANA databases please refer to https://help.sap.com/viewer/52715f71adba4aaeb480d946c742d1f6/2.0.03/en-US/18e1d60a75524e43b81acff652dae772.html
+
+#### Notice
 
 If you are still in the *Catalog* to view your table, go back to your *Editor* by using the *Chain* icon on the top left.
 
@@ -10,7 +16,7 @@ If you are still in the *Catalog* to view your table, go back to your *Editor* b
 
 Click right on your package *exercise* and click *New > Package*
 
-As a package name enter *models* and click *Create*
+As a package name enter `models` and click *Create*
 
 <img src="img/CreatePckg.png" alt="CreatePackageModels" width="40%">
 
@@ -18,7 +24,7 @@ To create a new calculation view, click right on your new package *models* and c
 
 <img src="img/NewCalcView.png" alt="NewCalculationView" width="40%">
 
-As a name enter *SIMPLEVIEW*
+As a name enter `SIMPLEVIEW`
 
 Leave the radio button on *Graphical* to use the graphical modeler to create your calculation view.
 
@@ -38,7 +44,7 @@ To add a data source to the projection, click the green + button next to the pro
 
 <img src="img/addDataSource.png" alt="addDataSourceToProjection" width="30%">
 
-Search for *Twitter* and select the table you created during the exercises as a datasource.
+Search for `Twitter` and select the table you created during the exercises as a datasource.
 
 Click *Ok*
 
@@ -58,73 +64,73 @@ Click on *Calculated Columns*
 
 Click +
 
-As a name enter *LOCALTIMESTAMP*
+As a name enter `LOCALTIMESTAMP`
 
 As a Data Type select *TIMESTAMP*
 
 Instead of Column Engine **select SQL** and enter the following expression:
 
-*UTCTOLOCAL("created", 'UTC+2')*
+`UTCTOLOCAL("created", 'UTC+2')`
 
 <img src="img/localtimestamp.png" alt="localTimestamp" width="80%">
 
 Click + to create a new calculated column
 
-As a name enter *HOUR*
+As a name enter `HOUR`
 
-Select *NVARCHAR* as data type and enter *length 5*
+Select *NVARCHAR* as data type and enter  `length 5`
 
 Change from Column Engine to **SQL** and enter the following statement:
 
-*right('0' || hour("LOCALTIMESTAMP"), 2) || ':00'*
+`right('0' || hour("LOCALTIMESTAMP"), 2) || ':00'`
 
 <img src="img/hour.png" alt="hour" width="60%">
 
 Click + to create a third calculated column
 
-As a name enter *CREATIONDATE*
+As a name enter `CREATIONDATE`
 
-Select *NVARCHAR* as data type and enter *length 10*
+Select *NVARCHAR* as data type and enter `length 10`
 
 Change to **SQL** and enter the following statement:
 
-*to_varchar(to_date(LOCALTIMESTAMP),'YYYY-MM-DD')*
+`to_varchar(to_date(LOCALTIMESTAMP),'YYYY-MM-DD')`
 
 <img src="img/creationDate.png" alt="creationDate" width="60%">
 
 Click + to create another calculated column
 
-As a name enter *ISOWEEK*
+As a name enter `ISOWEEK`
 
-Select *NVARCHAR* as data type with *length 10*
+Select *NVARCHAR* as data type with `length 10`
 
 Change to **SQL** and enter the following expression:
 
-*ISOWEEK(LOCALTIMESTAMP)*
+`ISOWEEK(LOCALTIMESTAMP)`
 
 <img src="img/isoweek.png" alt="isoweek" width="60%">
 
 Click + to create an additional calculated column.
 
-As a name enter *HOURDISPLAY*
+As a name enter `HOURDISPLAY`
 
-Select *NVARCHAR* as data type with *length 16*
+Select *NVARCHAR* as data type with `length 16`
 
 This time **leave the value for Column Engine** and enter the expression:
 
-*string("CREATIONDATE" + ' ' + "HOUR")*
+`string("CREATIONDATE" + ' ' + "HOUR")`
 
 <img src="img/hourdisplay.png" alt="hourdisplay" width="60%">
 
 Click + to add the last calculated column.
 
-As a name enter *VERIFIEDUSERID*
+As a name enter `VERIFIEDUSERID`
 
 Select *VARCHAR* as data type with length 1
 
 Enter the following expression in the **Column Engine**:
 
-*if("verified"=1, "user", string(null))*
+`if("verified"=1, "user", string(null))`
 
 <img src="img/verifieduserid.png" alt="verifiedUserId" width="60%">
 
@@ -155,9 +161,9 @@ Click *+ > Counter*
 
 <img src="img/newCounter.png" alt="newCounter" width="30%">
 
-As a name enter *NOOFENTRIES*
+As a name enter `NOOFENTRIES`
 
-As a label enter *No. of Entries*
+As a label enter `No. of Entries`
 
 Click the + in the counter section and select *id* via the small squares on the right of the cell.
 
@@ -165,11 +171,11 @@ Click the + in the counter section and select *id* via the small squares on the 
 
 Click *+ > Counter* to create a new counter
 
-As a name enter *NOOFVERIFIEDUSERS*
+As a name enter `NOOFVERIFIEDUSERS`
 
-As a label enter *No. of Verified Users*
+As a label enter `No. of Verified Users`
 
-For the counter select *VERIFIEDUSERID* as a column
+For the counter select `VERIFIEDUSERID` as a column
 
 <img src="img/noOfVerified.png" alt="noOfVerifiedUsers" width="60%">
 
@@ -189,9 +195,9 @@ Click *+ > level hierarchy*
 
 <img src="img/newHierarchy.png" alt="newHierarchy" width="40%">
 
-As a name enter *TIME_HIERARCHY*
+As a name enter `TIME_HIERARCHY`
 
-As a label enter *Time Hierarchy (Drill-Down)*
+As a label enter `Time Hierarchy (Drill-Down)`
 
 Under *nodes* click + and add three levels
 
@@ -224,13 +230,13 @@ In this folder all the calculation views of your SAP HANA database are listed. T
 <img src="img/openView.png" alt="openCalcView" width="100%">
 
 To test the calculation view you can now open a SQL console with the according button and write the following statement:
-*SELECT * FROM* "drag and drop your calculation view here"
+`SELECT * FROM <drag and drop your calculation view here>`
 
-Afterwards, click execute and the content should be displayed at the bottom of your screen.
+Afterwards, click *Execute* and the content should be displayed at the bottom of your screen.
 
 <img src="img/selectAll.png" alt="selectAll" width="100%">
 
-To test your calculated columns, you can exchange the * in your select-statement by *NOOFENTRIES*
+To test your calculated columns, you can exchange the `*` in your select-statement by *NOOFENTRIES*
 
 Click *Execute* again
 
