@@ -67,7 +67,6 @@ In the upcoming Pop-Up you can enter all the necessary information to create the
 Enter the following information in the screen:
 - Name: `cptrial`
 - Description: `Connection to CP Trial Account`
-- Connection Type: `SAP Cloud Platform`
 - SAP Cloud Platform Account: `<enter the technical name of your subaccount here>`
 - Database name: `exercise` (the name of your SAP HANA database in SAP Cloud Platform)
 - Landscape Host: `Europe (Rot) – `**Trial**

@@ -16,7 +16,7 @@ Via the main menu navigate to *Create > Model*
 
 <img src="img/home-create.png" alt="home-create" width="40%">
 
-To start your model choose *Use a datasource > Live Data connection*
+To start your model choose *Get data from a datasource > Live Data connection*
 
 <img src="img/liveData.png" alt="liveData" width="60%">
 
