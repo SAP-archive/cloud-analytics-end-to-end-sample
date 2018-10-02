@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" xmlns:DataFoundation="http://www.sap.com/ndb/BiModelDataFoundation.ecore" xmlns:Dimension="http://www.sap.com/ndb/BiModelDimension.ecore" id="SIMPLEVIEW" applyPrivilegeType="ANALYTIC_PRIVILEGE" dataCategory="CUBE" schemaVersion="2.3" defaultClient="$$client$$" visibility="reportingEnabled" outputViewType="Aggregation" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="SIMPLEVIEW"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="exercise.data::tables.Twitter" type="DATA_BASE_TABLE">
+    <viewAttributes allViewAttributes="true"/>
+    <columnObject schemaName="DEMO" columnObjectName="exercise.data::tables.Twitter"/>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="created"/>
+      <viewAttribute id="id"/>
+      <viewAttribute id="lang"/>
+      <viewAttribute id="replyId"/>
+      <viewAttribute id="retweetedId"/>
+      <viewAttribute id="source"/>
+      <viewAttribute id="text"/>
+      <viewAttribute id="user"/>
+      <viewAttribute id="userId"/>
+      <viewAttribute id="verified"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="LOCALTIMESTAMP" datatype="TIMESTAMP" expressionLanguage="SQL">
+        <formula>UTCTOLOCAL(&quot;created&quot;, 'UTC+2')</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="HOUR" datatype="NVARCHAR" length="5" expressionLanguage="SQL">
+        <formula>right('0' || hour(&quot;LOCALTIMESTAMP&quot;), 2) || ':00'</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="CREATIONDATE" datatype="NVARCHAR" length="10" expressionLanguage="SQL">
+        <formula>to_varchar(to_date(LOCALTIMESTAMP),'YYYY-MM-DD')</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="ISOWEEK" datatype="NVARCHAR" length="10" expressionLanguage="SQL">
+        <formula>ISOWEEK(LOCALTIMESTAMP)</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="HOURDISPLAY" datatype="NVARCHAR" length="16" expressionLanguage="COLUMN_ENGINE">
+        <formula>string(&quot;CREATIONDATE&quot; + ' ' + &quot;HOUR&quot;)</formula>
+      </calculatedViewAttribute>
+      <calculatedViewAttribute id="VERIFIEDUSERID" datatype="VARCHAR" length="1" expressionLanguage="COLUMN_ENGINE">
+        <formula>if(&quot;verified&quot;=1, &quot;user&quot;, string(null))</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="#exercise.data::tables.Twitter">
+      <mapping xsi:type="Calculation:AttributeMapping" target="created" source="created"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="id" source="id"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="lang" source="lang"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="replyId" source="replyId"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="retweetedId" source="retweetedId"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="source" source="source"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="text" source="text"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="user" source="user"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="userId" source="userId"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="verified" source="verified"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="id" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="id"/>
+      <keyMapping columnObjectName="Projection_1" columnName="id"/>
+    </attribute>
+    <attribute id="lang" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="lang"/>
+      <keyMapping columnObjectName="Projection_1" columnName="lang"/>
+    </attribute>
+    <attribute id="replyId" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="replyId"/>
+      <keyMapping columnObjectName="Projection_1" columnName="replyId"/>
+    </attribute>
+    <attribute id="retweetedId" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="retweetedId"/>
+      <keyMapping columnObjectName="Projection_1" columnName="retweetedId"/>
+    </attribute>
+    <attribute id="source" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="source"/>
+      <keyMapping columnObjectName="Projection_1" columnName="source"/>
+    </attribute>
+    <attribute id="user" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="user"/>
+      <keyMapping columnObjectName="Projection_1" columnName="user"/>
+    </attribute>
+    <attribute id="userId" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="userId"/>
+      <keyMapping columnObjectName="Projection_1" columnName="userId"/>
+    </attribute>
+    <attribute id="LOCALTIMESTAMP" order="8" semanticType="empty" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LOCALTIMESTAMP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="LOCALTIMESTAMP"/>
+    </attribute>
+    <attribute id="HOUR" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HOUR"/>
+      <keyMapping columnObjectName="Projection_1" columnName="HOUR"/>
+    </attribute>
+    <attribute id="CREATIONDATE" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CREATIONDATE"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CREATIONDATE"/>
+    </attribute>
+    <attribute id="ISOWEEK" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ISOWEEK"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ISOWEEK"/>
+    </attribute>
+    <attribute id="HOURDISPLAY" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HOURDISPLAY"/>
+      <keyMapping columnObjectName="Projection_1" columnName="HOURDISPLAY"/>
+    </attribute>
+    <attribute id="VERIFIEDUSERID" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VERIFIEDUSERID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VERIFIEDUSERID"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures>
+    <measure id="NOOFENTRIES" hidden="false" order="14" aggregationType="sum" measureType="simple" calculatedMeasureType="counter" aggregatable="true" datatype="INTEGER">
+      <descriptions defaultDescription="No. of Entries"/>
+      <exceptionAggregation>
+        <attribute attributeName="id"/>
+      </exceptionAggregation>
+      <formula>1</formula>
+    </measure>
+    <measure id="NOOFVERIFIEDUSERS" hidden="false" order="15" aggregationType="sum" measureType="simple" calculatedMeasureType="counter" aggregatable="true" datatype="INTEGER">
+      <descriptions defaultDescription="No. of Verified Users"/>
+      <exceptionAggregation>
+        <attribute attributeName="VERIFIEDUSERID"/>
+      </exceptionAggregation>
+      <formula>1</formula>
+    </measure>
+  </calculatedMeasures>
+  <restrictedMeasures/>
+  <localDimensions>
+    <localDimension id="TIME_HIERARCHY">
+      <attributeRef xsi:type="DataFoundation:Attribute">#ISOWEEK</attributeRef>
+      <attributeRef xsi:type="DataFoundation:Attribute">#CREATIONDATE</attributeRef>
+      <attributeRef xsi:type="DataFoundation:Attribute">#HOURDISPLAY</attributeRef>
+      <hierarchies>
+        <hierarchy xsi:type="Dimension:LeveledHierarchy" id="TIME_HIERARCHY" aggregateAllNodes="true" orphanedNodesHandling="ROOT_NODES" rootNodeVisibility="ADD_ROOT_NODE" withRootNode="true" nodeStyle="LEVEL_NAME_ENFORCED">
+          <descriptions defaultDescription="Time Hierarchy (Drill-Down)"/>
+          <levels>
+            <level levelAttribute="#ISOWEEK" levelType="MDLEVEL_TYPE_REGULAR" order="1" orderAttribute="#ISOWEEK" sortDirection="ASC"/>
+            <level levelAttribute="#CREATIONDATE" levelType="MDLEVEL_TYPE_REGULAR" order="2" orderAttribute="#CREATIONDATE" sortDirection="ASC"/>
+            <level levelAttribute="#HOURDISPLAY" levelType="MDLEVEL_TYPE_REGULAR" order="3" orderAttribute="#HOURDISPLAY" sortDirection="ASC"/>
+          </levels>
+        </hierarchy>
+      </hierarchies>
+    </localDimension>
+  </localDimensions>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="75" y="287"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
