@@ -16,9 +16,13 @@ With a right click on *Content* create a new package via *New > Package*
 
 Enter `exercise` as the package name and click *Create*
 
+**NOTE:** please pay attention to the spelling, as HANA is case senstitive.
+
 <img src="img/exercisePckg.png" alt="newExercisePackage" width="40%">
 
 Repeat this step to create a sub-package `data` in your newly created *exercise* package. For the *data* package again create a sub-package named `loads`.
+
+**NOTE:** please pay attention to the spelling, as HANA is case senstitive.
 
 Afterwards your structure should look like this:
 
