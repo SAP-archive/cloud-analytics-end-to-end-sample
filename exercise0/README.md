@@ -1,5 +1,3 @@
-### AIN623
-
 # Prerequisite: Setting up the Development environment
 
 In this exercise you are creating a SAP Cloud Platform trial account and a SAP HANA database inside your new trial account.
