@@ -1,5 +1,3 @@
-### AIN623
-
 # Exercise 2: Importing Data
 
 For this sample scenario a dataset with 1000 entries is provided as a csv file. As the data should be imported into a HANA table, different files are needed in the HANA database. How to create the according files and the content of these files is described in this exercise.
