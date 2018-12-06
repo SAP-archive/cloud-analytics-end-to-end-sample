@@ -1,5 +1,3 @@
-### AIN623
-
 # Exercise 5: Modeling in SAP Analytics Cloud
 
 A model is a representation of the business data of an organization or business segment. The Modeler of SAP Analytics Cloud can be used to create, maintain, and load data into models.
