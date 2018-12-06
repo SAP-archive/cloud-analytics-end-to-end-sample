@@ -1,8 +1,8 @@
 # cloud-analytics-end-to-end-sample
-TechEd session: AIN623 - Deep Dive into SAP Analytics Cloud and SAP Cloud Platform.
+This scenario was also part of the TechEd session *AIN623 - Deep Dive into SAP Analytics Cloud and SAP Cloud Platform* in 2018. But it can be followed by everyone also after TechEd 2018
 
 ## Description
-The TechEd 2018 session AIN623 describes how to create a end-to-end analytics scenario using the trial accounts of SAP Cloud Platform and SAP Analytics Cloud.
+This scenario describes how to create a end-to-end analytics scenario using the trial accounts of SAP Cloud Platform and SAP Analytics Cloud.
 
 The exercise documentation of this sample is completely self-contained and can therefore also be used after TechEd.
 
@@ -31,20 +31,10 @@ The simplified scenario diagram showing only the exercise content could look lik
 
 <img src="img/diagram2.JPG" alt="diagram2" width="80%">
 
-## NOTICE
-This sample is a TechEd sample. The exercise descriptions of this sample are used during the TechEd session AIN623.
 
 ## Requirements
 
-### For TechEd 2018
-For attendees of SAP TechEd 2018, the session instructor will hand out log in information for SAP Cloud Platform trial accounts. Therefore you can skip Exercise 0 and start directly with [Exercise 1](./exercise1/README.md).
-
-You can also use your own trial account. In this case please refer to [Exercise 0](./exercise0/README.md).
-
-In Exercise 4 you are creating an SAP Analytics Cloud trial account. Therefore you need a company e-mail address, or you can contact your session instructor.
-
-### For General Use
-If you are following the exercises outside the TechEd session AIN623, you will need an SAP Cloud Platform trial or enterprise account (including SAP HANA) and an SAP Analytics Cloud trial or enterprise account.
+To follow this scenario, you will need an SAP Cloud Platform trial or enterprise account (including SAP HANA) and an SAP Analytics Cloud trial or enterprise account.
 
 [Exercise 0](./exercise0/README.md) describes how to create an SAP Cloud Platform account and how to create a HANA database there.
 
