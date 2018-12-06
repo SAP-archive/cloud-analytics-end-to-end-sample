@@ -1,5 +1,3 @@
-### AIN623
-
 # Exercise 6: Creating a Dashboard in SAP Analytics Cloud
 
 A story is a presentation-style document that uses charts, visualizations, text, images, and pictograms to describe data. Once you create or open a story, you can add and edit pages, sections, and elements as you like. The story toolbar is divided into different categories such as File, Insert, Data, and Tools to help you find options and perform tasks more efficiently.
