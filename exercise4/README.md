@@ -1,5 +1,3 @@
-### AIN623
-
 # Exercise 4: Setting Up A Live Data Connection to SAP Analytics Cloud
 
 You can create live data connections to on-premise and cloud systems. Data is “live”, meaning that when a user opens a story in SAP Analytics Cloud, changes made to the data in the source system are reflected immediately.
@@ -17,7 +15,6 @@ SAP Analytics Cloud is optimized for Google Chrome browsers. If you use a differ
 *Note: if you already have an enterprise account of SAP Analytics Cloud, you can use this account, too, to do the following exercises. In this case you can skip Step 1.*
 
 **For the following exercise you will need a company e-mail address.**
-If you are attending the TechEd session AIN623 and don’t have a company mail address or if you are an SAP employee, please contact your course instructor on how to proceed.
 
 Go to the [SAP Analytics Cloud website](https://www.sapanalytics.cloud/)
 
