@@ -1,5 +1,3 @@
-### AIN623
-
 # Exercise 3: SAP HANA Modeling
 
 Once the data is imported correctly into the SAP HANA database, it has to be transformed, before it can be handed over to SAP Analytics Cloud. SAP Analytics Cloud expects a calculation view.
