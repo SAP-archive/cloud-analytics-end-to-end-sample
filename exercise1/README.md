@@ -1,5 +1,3 @@
-### AIN623
-
 # Exercise 1: Manage Roles and Users
 
 During the creation of a SAP HANA database in a SAP Cloud Platform trial account a *SYSTEM* user is created automatically. As this user is mainly designed for administrative tasks and is therefore limited in some rights, a second user is needed. How to create this user and how to assign the according roles is described in this exercise.
