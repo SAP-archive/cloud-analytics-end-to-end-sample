@@ -1,3 +1,8 @@
+![](https://img.shields.io/badge/STATUS-NOT%20CURRENTLY%20MAINTAINED-red.svg?longCache=true&style=flat)
+
+# Important Notice
+This public repository is read-only and no longer maintained.
+
 # cloud-analytics-end-to-end-sample
 This scenario was also part of the TechEd session *AIN623 - Deep Dive into SAP Analytics Cloud and SAP Cloud Platform* in 2018. But it can be followed by everyone also after TechEd 2018
 
